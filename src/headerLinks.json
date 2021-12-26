@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "content": "Wooden Furniture",
+        "link": "/"
+    },
+    {
+        "id": 2,
+        "content": "About",
+        "link": "/"
+    },
+    {
+        "id": 3,
+        "content": "Stories",
+        "link": "/"
+    }
+]
