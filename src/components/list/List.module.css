@@ -1,0 +1,14 @@
+.list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.35;
+  text-align: center;
+  color: #111111;
+}
