@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Logo from "../logo/Logo";
-import List from "../list/List";
+import {List} from "../list/List";
 import styled from "styled-components";
 
 const HeaderWrapper = styled.header`
