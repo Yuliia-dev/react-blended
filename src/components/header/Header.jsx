@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import Logo from "../logo/Logo";
-import {List} from "../list/List";
+import { List } from "../list/List";
 import styled from "styled-components";
-
 const HeaderWrapper = styled.header`
   display: flex;
 
@@ -11,11 +10,9 @@ const HeaderWrapper = styled.header`
   }
 `;
 
-export default function Header({ links, title }) {
-  console.log(title);
+export default function Header({ links }) {
   return (
     <HeaderWrapper>
-      {/* <p>{title}</p> */}
       <List array={links} />
       <Logo classLogo="logo" />
     </HeaderWrapper>
