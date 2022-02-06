@@ -5,7 +5,7 @@ import headerLinks from "./headerLinks.json";
 import Footer from "./components/footer/Footer";
 import Container from "./components/container/Container";
 import { lazy, Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useParams } from "react-router-dom";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Stories = lazy(() => import("./pages/Stories"));
@@ -25,7 +25,9 @@ function App() {
               <Route path="/users" element={<Users />} index={true} />
               <Route path="/products" element={<Products />} />
             </Route>
-            <Route path="about" element={<AboutPage />} />
+            <Route path="about" element={<AboutPage />}>
+              <Route path=":id" element={<Feedback />} />
+            </Route>
             <Route path="stories" element={<Stories />} />
           </Routes>
         </Suspense>
@@ -44,4 +46,10 @@ function Users() {
 
 function Products() {
   return <h1>Products</h1>;
+}
+
+function Feedback() {
+  const { id } = useParams();
+  console.log(id);
+  return <h2>Feedback-{id}</h2>;
 }
