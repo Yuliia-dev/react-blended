@@ -1,30 +1,41 @@
+import styled from 'styled-components';
 import Icon from '../Icon/Icon';
+const BgcSpan = styled.span`
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url('../../images/car.png');
+  background-position: center;
+`;
+const ImageList = styled.ul`
+  display: flex;
+  justify-content: space-between;
+`;
+const ImageItem = styled.li`
+  list-style: none;
+  display: flex;
+  gap: 20px;
+`;
 const Features = () => {
   return (
-    <ul>
-      <li>
+    <ImageList>
+      <ImageItem>
         <Icon name="close" fill="red" />
         <p>Free Shipping</p>
-      </li>
-      <li>
-        <button type="button">
-          <Icon name="search" fill="green" width="50px" height="50px" />
-          <p>lorem</p>
-        </button>
-      </li>
-      <li>
-        <button type="button">
-          <Icon name="heart" fill="white" width="50px" height="50px" />
-          <p>lorem</p>
-        </button>
-      </li>
-      <li>
-        <button type="button">
-          <Icon name="wood" fill="gray" width="50px" height="50px" />
-          <p>lorem</p>
-        </button>
-      </li>
-    </ul>
+      </ImageItem>
+      <ImageItem>
+        <Icon name="close" fill="red" />
+        <p>Awarded Product Design</p>
+      </ImageItem>
+      <ImageItem>
+        <Icon name="close" fill="red" />
+        <p>Ecofriendly Approach</p>
+      </ImageItem>
+      <ImageItem>
+        <Icon name="close" fill="red" />
+        <p>Crafted in Spain</p>
+      </ImageItem>
+    </ImageList>
   );
 };
 export default Features;
