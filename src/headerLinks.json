@@ -7,11 +7,11 @@
     {
         "id": 2,
         "content": "About",
-        "link": "/"
+        "link": "/about"
     },
     {
         "id": 3,
         "content": "Stories",
-        "link": "/"
+        "link": "/stories"
     }
 ]

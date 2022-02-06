@@ -1,19 +1,23 @@
 import { v4 as uuid } from "uuid";
 import styles from "./List.module.css";
+import { NavLink, Outlet } from "react-router-dom";
 
 export function List({ array }) {
   return (
-    <ul className={styles.list}>
-      {array.map(({ id, content, link }) => {
-        return (
-          <li key={id}>
-            <a className={styles.link} href={link}>
-              {content}
-            </a>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <ul className={styles.list}>
+        {array.map(({ id, content, link }) => {
+          return (
+            <li key={id}>
+              <NavLink className={styles.link} to={link}>
+                {content}
+              </NavLink>
+            </li>
+          );
+        })}
+      </ul>
+      <Outlet />
+    </>
   );
 }
 
